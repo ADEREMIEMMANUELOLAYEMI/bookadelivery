@@ -107,7 +107,7 @@ const DeliveryPage = () => {
 
  {/* From Dropdown */}
  <Listbox value={from} onChange={setFrom}>
-    <div className="relative w-[280px]">
+    <div className="relative w-[280px] max-md:m-auto max-sm:w-[180px]">
       <Listbox.Button className="h-[55px] w-full border border-[#D9DBE9] rounded-[14px] bg-white py-[16px] pl-[18px] pr-10 text-sm text-[#4E4B66] text-left shadow-sm">
         {from || "From"}
         <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
@@ -134,7 +134,7 @@ const DeliveryPage = () => {
 
   {/* To Dropdown */}
   <Listbox value={to} onChange={setTo}>
-    <div className="relative w-[280px]">
+    <div className="relative w-[280px] max-md:m-auto max-sm:w-[180px]">
       <Listbox.Button className="h-[55px] w-full border border-[#D9DBE9] rounded-[14px] bg-white py-[16px] pl-[18px] pr-10 text-sm text-[#4E4B66] text-left shadow-sm">
         {to || "To"}
         <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
@@ -162,13 +162,13 @@ const DeliveryPage = () => {
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="flex-1 border  border-[#D9DBE9] rounded-[14px] px-[18px] py-[16px] text-sm text-[#4E4B66] bg-white shadow-sm"
+              className="flex-1 border max-sm:w-[180px] max-md:w-[280px]  border-[#D9DBE9] rounded-[14px] px-[18px] py-[16px] text-sm text-[#4E4B66] max-md:m-auto bg-white shadow-sm"
             />
           </div>
 
           <button
             onClick={handleSubmit}
-            className="w-[471px] h-[53px] bg-[#264AE5] hover:bg-[#1f3bcc] text-white py-[16px] rounded-[14px] flex items-center justify-center gap-2 m-auto text-[15px] font-medium"
+            className="w-[471px] max-sm:w-[180px] max-md:w-[220px] h-[53px] bg-[#264AE5] hover:bg-[#1f3bcc] text-white py-[16px] rounded-[14px] flex items-center justify-center gap-2 m-auto text-[15px] font-medium"
           > <img src={Search} />
             Book a Delivery
           </button>
